@@ -1,31 +1,27 @@
 exports.config = {
     directConnect: true,
-
-    specs: [
-        '../specs/demoSpec.js'
-    ],
-
+    specs: ['../specs/loginSpec.js'],
+    multiCapabilities: [{
+            'browserName': 'chrome'
+		       }
+		       ],
     maxSessions: -1,
-    baseUrl: 'http://mozart-qa.iso.com/',
-    allScriptsTimeout: 11000,
-    getPageTimeout: 10000,
-    beforeLaunch: function () {},
-    onPrepare: function () {},
-    onComplete: function () {},
-    onCleanUp: function (exitCode) {},
-    afterLaunch: function (exitCode) {},
-    params: {
-        login: {
-            user: 'stangudu',
-            password: 'Verisk@123'
-        }
+    capabilities: {
+        browserName: 'chrome',
+        shardTestFiles: true,
+        maxInstances: 3
     },
-    framework: 'jasmine',
-    jasmineNodeOpts: {
-        showColors: true,
-        defaultTimeoutInterval: 30000,
-        print: function () {},
-        grep: 'pattern',
-        invertGrep: false
-    }
+
+    baseUrl: 'http://abc.com',
+    beforeLaunch: function () {
+
+    },
+    onPrepare: function () {
+        var SpecReporter = require('jasmine-spec-reporter');
+        jasmine.getEnv().addReporter(new SpecReporter({
+            displayStacktrace: 'all'
+        }));
+    },
+    onComplete: function () {},
+    resultJsonOutputFile: '../results/test.json',
 };
