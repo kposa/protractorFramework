@@ -3,8 +3,8 @@ exports.config = {
     specs: ['../specs/loginSpec.js'],
     multiCapabilities: [{
             'browserName': 'chrome'
-		       }
-		       ],
+         }
+         ],
     maxSessions: -1,
     capabilities: {
         browserName: 'chrome',
@@ -17,6 +17,7 @@ exports.config = {
 
     },
     onPrepare: function () {
+        browser.manage().window().maximize();
         var SpecReporter = require('jasmine-spec-reporter');
         jasmine.getEnv().addReporter(new SpecReporter({
             displayStacktrace: 'all'
@@ -24,4 +25,8 @@ exports.config = {
     },
     onComplete: function () {},
     resultJsonOutputFile: '../results/test.json',
+
+    jasmineNodeOpts: {
+        defaultTimeoutInterval: 120000
+    },
 };
