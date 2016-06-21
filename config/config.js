@@ -1,13 +1,13 @@
 var SpecReporter = require('jasmine-spec-reporter');
 var HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
 var reporter = new HtmlScreenshotReporter({
-    dest: '../results/htmlReports',
+    dest: 'results/htmlReports',
     cleanDestination: true,
     showSummary: true,
     showConfiguration: true,
     reportTitle: 'AutomationTestResutls',
     filename: 'AutomationTestResutls.html',
-    ignoreSkippedSpecs: true,
+    ignoreSkippedSpecs: false,
     pathBuilder: function (currentSpec, suites, browserCapabilities) {
         // will return chrome/your-spec-name.png
         return browserCapabilities.get('browserName') + '/' + currentSpec.fullName;
@@ -27,7 +27,7 @@ exports.config = {
         maxInstances: 3
     },
 
-    baseUrl: 'http://abc.com',
+    baseUrl: 'http://qa123.com',
     beforeLaunch: function () {
         return new Promise(function (resolve) {
             reporter.beforeLaunch(resolve);
