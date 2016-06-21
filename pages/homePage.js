@@ -24,11 +24,7 @@ var homePage = function () {
     };
 
     this.getSearchPage = function () {
-        browser.enterRepl();
-        searchIcon.click().then(function () {
-            browser.enterRepl();
-            expect(searchPage.searchTextBox).not.toBeNull();
-        });
+        browser.get('http://mozart-qa.iso.com/Home/Search');
     };
 
 };
