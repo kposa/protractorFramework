@@ -1,23 +1,24 @@
 {
-    "name": "protractorFramework",
-    "version": "1.0.0",
-    "description": "Reusable Protractor Framework",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/kposa/protractorFramework.git"
-    },
-    "author": "Kumar Posa",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/kposa/protractorFramework/issues"
-    },
-    "homepage": "https://github.com/kposa/protractorFramework",
-    "dependencies": {
-        "jasmine-spec-reporter": "^2.5.0",
-        "protractor-jasmine2-screenshot-reporter": "^0.3.1"
-    }
+  "name": "protractorFramework",
+  "version": "1.0.0",
+  "description": "Reusable Protractor Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kposa/protractorFramework.git"
+  },
+  "author": "Kumar Posa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kposa/protractorFramework/issues"
+  },
+  "homepage": "https://github.com/kposa/protractorFramework",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "jasmine-spec-reporter": "^2.5.0",
+    "protractor-jasmine2-screenshot-reporter": "^0.3.1"
+  }
 }
