@@ -4,7 +4,7 @@ var gulp = require('gulp');
 var gulpProtractorAngular = require('gulp-angular-protractor');
 
 // Setting up the test task 
-gulp.task('protractor', function (callback) {
+gulp.task('default', function (callback) {
     gulp
         .src(['specs/*.js'])
         .pipe(gulpProtractorAngular({
