@@ -4,7 +4,6 @@ var testData = require('../testData/testData.json');
 
 describe('Verify Login functionality', function () {
     it('User should login to application', function () {
-        console.log('testData.Admin_UserName', testData.Admin_UserName);
         loginPage.getLoginPage();
         loginPage.login(testData.Admin_UserName, testData.Admin_Password);
     });

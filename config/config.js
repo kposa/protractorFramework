@@ -47,7 +47,7 @@ exports.config = {
         });
     },
     onComplete: function () {},
-    resultJsonOutputFile: '../results/test.json',
+    resultJsonOutputFile: 'results/test.json',
 
     jasmineNodeOpts: {
         defaultTimeoutInterval: 120000

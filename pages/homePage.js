@@ -1,8 +1,9 @@
 'use strict';
+var testData = require('../testData/testData.json');
 var searchPage = require('../pages/searchPage');
 var welcomeMenu = element(by.css('.usermenu.ng-binding'));
 var customerTextBox = element(by.id('searchTextBoxId'));
-var customerOption = element(by.linkText('Testing - No Class Table'));
+var customerOption = element(by.linkText(testData.client));
 var searchIcon = element.all(by.css('.vm-icon.icon-search')).filter(function (elem, index) {
     return elem.getAttribute('href').then(function (text) {
         return text = '/Home/Search';
