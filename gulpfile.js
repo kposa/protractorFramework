@@ -1,5 +1,5 @@
 'use strict';
-
+var protractorReport = require('gulp-protractor-cucumber-html-report');
 var gulp = require('gulp');
 var gulpProtractorAngular = require('gulp-angular-protractor');
 
@@ -19,12 +19,26 @@ gulp.task('jasmine', function (callback) {
 });
 
 gulp.task('cucumber', function (callback) {
+
+
     gulp
-        .src(['features/*.feature'])
+        .src('features/cucumberFeatures.feature')
         .pipe(gulpProtractorAngular({
-            'configFile': 'config/config_cucumber.js',
+            'configFile': './config/config_cucumber.js',
             'debug': false,
             'autoStartStopServer': false
+        }))
+        .on('error', function (e) {
+            console.log(e);
+        })
+        .on('end', callback);
+});
+
+gulp.task('report', function (callback) {
+    gulp
+        .src('./results/result.json')
+        .pipe(protractorReport({
+            dest: './results/'
         }))
         .on('error', function (e) {
             console.log(e);
