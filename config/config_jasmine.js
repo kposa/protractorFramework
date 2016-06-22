@@ -5,8 +5,8 @@ var reporter = new HtmlScreenshotReporter({
     cleanDestination: true,
     showSummary: true,
     showConfiguration: true,
-    reportTitle: 'AutomationTestResutls',
-    filename: 'AutomationTestResutls.html',
+    reportTitle: 'Automation Test Resutls',
+    filename: 'Automation_Test_Resutls.html',
     ignoreSkippedSpecs: false,
     pathBuilder: function (currentSpec, suites, browserCapabilities) {
         // will return chrome/your-spec-name.png
