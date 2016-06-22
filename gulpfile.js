@@ -8,7 +8,7 @@ gulp.task('default', function (callback) {
     gulp
         .src(['specs/*.js'])
         .pipe(gulpProtractorAngular({
-            'configFile': 'config/config.js',
+            'configFile': 'config/config_jasmine.js',
             'debug': false,
             'autoStartStopServer': false
         }))

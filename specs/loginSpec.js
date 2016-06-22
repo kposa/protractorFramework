@@ -1,5 +1,5 @@
-var loginPage = require('../pages/loginPage');
-var homePage = require('../pages/homePage');
+var loginPage = require('../pageObject/loginPage');
+var homePage = require('../pageObject/homePage');
 var testData = require('../testData/testData.json');
 
 describe('Verify Login functionality', function () {

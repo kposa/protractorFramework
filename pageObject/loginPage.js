@@ -1,5 +1,5 @@
 'use strict';
-var homePage = require('../pages/homePage');
+var homePage = require('../pageObject/homePage');
 var userNameTextBox = element(By.id('username'));
 var passwordTextBox = element(By.id('password'));
 var loginButton = element(By.id('signIn'));

@@ -1,6 +1,6 @@
 'use strict';
 var testData = require('../testData/testData.json');
-var searchPage = require('../pages/searchPage');
+var searchPage = require('../pageObject/searchPage');
 var welcomeMenu = element(by.css('.usermenu.ng-binding'));
 var customerTextBox = element(by.id('searchTextBoxId'));
 var customerOption = element(by.linkText(testData.client));
