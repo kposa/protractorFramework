@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/kposa/protractorFramework",
   "dependencies": {
+    "cucumber": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-angular-protractor": "^0.1.1",
     "jasmine-spec-reporter": "^2.5.0",
+    "protractor-cucumber-framework": "^0.6.0",
     "protractor-jasmine2-screenshot-reporter": "^0.3.1"
   }
 }
